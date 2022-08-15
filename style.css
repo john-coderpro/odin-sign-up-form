@@ -1,0 +1,161 @@
+@font-face {
+    font-family: Norse;
+    src: url('fonts/Norse-Bold.woff2') format('woff2'),
+        url('fonts/Norse-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin: 0;
+}
+
+
+
+.hero {
+    position: relative;
+    background-image: url(./images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    width: min(600px, 40vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 auto;
+}
+
+.hero>p {
+    margin-top: auto;
+}
+
+.logo {
+    font-family: 'Norse-Bold';
+    font-weight: bold;
+    display: flex;
+    background-color: rgba(0, 0, 0, .5);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20vh;
+
+}
+
+@media (max-width: 53em) {
+    body {
+        flex-direction: column;
+    }
+
+    .hero {
+        height: max(300px, 30vh);
+        width: 100vw;
+    }
+
+    .logo {
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+a {
+    color: white
+}
+
+a:only-child {
+    color: #596D48;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+}
+
+input {
+    margin-bottom: 1em;
+    outline: 0;
+    border: 1px solid #E5E7EB;
+    padding: .3em 0;
+    border-radius: 5px;
+}
+
+input:focus {
+    border: 1px solid hsl(202, 83%, 45%);
+    box-shadow: 3px 3px 3px hsl(0, 0%, 90%);
+}
+
+.form-container {
+    background-color: hsl(0, 0%, 95%);
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5em;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 29em) {
+    .user-info {
+        flex-direction: column;
+    }
+}
+
+.error-message {
+    color: red;
+    margin-top: -.7em;
+    font-size: 10px;
+    display: block;
+}
+
+.user-info__first-block>input:last-child {
+    margin-bottom: 0;
+}
+
+.button-cta {
+    font-weight: bold;
+    background-color: #596D48;
+    padding: .3em 1.5em;
+    color: hsl(0, 0%, 95%);
+    border: none;
+    border-radius: 10px;
+    margin-left: 2em;
+    font-size: 1.5rem;
+    margin-top: 1em;
+    box-shadow: 3px 3px 3px hsl(0, 0%, 90%);
+
+}
+
+form~p {
+    margin-left: 3em;
+}
+
+.error {
+    border-color: red;
+}
+
+.logo>img {
+    width: 80px;
+    height: 80%;
+}
